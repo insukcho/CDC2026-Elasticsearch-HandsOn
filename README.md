@@ -2,9 +2,14 @@
 Resource share for the Elasticsearch HandsOn session in CDC2026
 
 ### checking the raw index mapping info
+
+```
 GET parks_raw/_mapping
+```
 
 ### Create a new index with adding `simentic_search` field
+
+```
 PUT parks_new
 {
     "mappings": {
@@ -68,11 +73,17 @@ PUT parks_new
       }
     }    
 }
+```
 
 ### checking the new index mapping info
+
+```
 GET parks_new/_mapping
+```
 
 ### reindexing 
+
+```
 POST _reindex?wait_for_completion=false
 {
   "source": {
@@ -83,21 +94,33 @@ POST _reindex?wait_for_completion=false
     "index": "parks_new"
   }
 }
+```
 
 ### Check reindexing task
+
+```
 GET _tasks/MtbdXlP5Qc2I56Yp4XURqA:23109
+```
 
 ### checking the new index data count
+
+```
 GET parks_new/_count
+```
 
 ### Query text analyze simulation
+
+```
 GET parks_new/_analyze
 {
   "field": "description",
   "text": "Which park is the best for camping and swimming with kids?"
 }
+```
 
 ### Standard search
+
+```
 GET parks_new/_search
 {
   "query": {
@@ -106,8 +129,11 @@ GET parks_new/_search
     }
   }
 }
+```
 
 ### Simantic search
+
+```
 GET parks_new/_search
 {
   "query": {
@@ -117,8 +143,11 @@ GET parks_new/_search
     }
   }
 }
+```
 
 ### Hybrid search (https://www.elastic.co/docs/solutions/search/hybrid-semantic-text)
+
+```
 GET parks_new/_search
 {
   "retriever": {
@@ -147,5 +176,6 @@ GET parks_new/_search
     }
   }
 }
+```
 
 
