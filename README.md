@@ -7,7 +7,7 @@ Resource share for the Elasticsearch HandsOn session in CDC2026
 GET parks_raw/_mapping
 ```
 
-### Create a new index with adding `simentic_search` field
+### Create a new index with adding `simentic_text` field type and `copy_to` the field
 
 ```
 PUT parks_new
@@ -24,12 +24,7 @@ PUT parks_new
           ]
         },
         "description_semantic": {
-          "type": "semantic_text",
-          "inference_id": ".elser-2-elasticsearch",
-          "model_settings": {
-            "service": "elasticsearch",
-            "task_type": "sparse_embedding"
-          }
+          "type": "semantic_text"
         },
         "designation": {
           "type": "text"
@@ -99,7 +94,7 @@ POST _reindex?wait_for_completion=false
 ### Check reindexing task
 
 ```
-GET _tasks/MtbdXlP5Qc2I56Yp4XURqA:23109
+GET _tasks/<TASK-ID>
 ```
 
 ### checking the new index data count
