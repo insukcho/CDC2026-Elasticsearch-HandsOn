@@ -212,7 +212,7 @@ POST /_query?format=txt
 {
   "query": """
     FROM parks_new METADATA _score
-    | WHERE description: "best part for camping and swimming with kids?" OR match(description_semantic, "Which park is the best for camping and swimming with kids?", { "boost": 0.75 })
+    | WHERE description: "Which park is the best for camping and swimming with kids?" OR match(description_semantic, "Which park is the best for camping and swimming with kids?", { "boost": 0.75 })
     | SORT _score DESC
     | KEEP park_code, name, description
     | LIMIT 5
