@@ -1,4 +1,4 @@
-# CDC2026-Elasticsearch-HandsOn
+# CDC2026 Elasticsearch HandsOn Session Resources
 Resource share for the Elasticsearch HandsOn session in CDC2026
 
 ### checking the raw index mapping info
@@ -118,11 +118,18 @@ GET parks_new/_analyze
 ```
 GET parks_new/_search
 {
+  "size": 5,
   "query": {
     "match": {
       "description": "Which park is the best for camping and swimming with kids?"
     }
-  }
+  },
+  "fields": [
+    "park_code",
+    "name",
+    "description"
+  ],
+  "_source": false
 }
 ```
 
@@ -131,20 +138,28 @@ GET parks_new/_search
 ```
 GET parks_new/_search
 {
+  "size": 5,
   "query": {
     "semantic": {
       "field": "description_semantic",
       "query": "Which park is the best for camping and swimming with kids?"
     }
-  }
+  },
+  "fields": [
+    "park_code",
+    "name",
+    "description"
+  ],
+  "_source": false
 }
 ```
 
-### Hybrid search (https://www.elastic.co/docs/solutions/search/hybrid-semantic-text)
+### Hybrid search
 
 ```
 GET parks_new/_search
 {
+  "size": 5,
   "retriever": {
     "rrf": {
       "retrievers": [
@@ -169,8 +184,29 @@ GET parks_new/_search
         }
       ]
     }
-  }
+  },
+  "fields": ["park_code", "name", "description"],
+  "_source": false
 }
 ```
+
+### Hybrid search with ESQL
+
+```
+POST /_query?format=txt
+{
+  "query": """
+    FROM parks_new METADATA _score
+    | WHERE description: "best part for camping and swimming with kids?" OR match(description_semantic, "Which park is the best for camping and swimming with kids?", { "boost": 0.75 })
+    | SORT _score DESC
+    | KEEP park_code, name, description
+    | LIMIT 5
+  """
+}
+```
+
+### References
+
+- https://www.elastic.co/docs/solutions/search/hybrid-semantic-text
 
 
