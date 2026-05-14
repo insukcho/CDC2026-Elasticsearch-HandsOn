@@ -1,5 +1,16 @@
-# CDC2026 Elasticsearch HandsOn Session Resources
+# CDC2026 Elasticsearch 로 Private AI system 구축하기
 Resource share for the Elasticsearch HandsOn session in CDC2026
+
+### Elasticsearch 설치하기
+
+- Option 1. 클라우드 서비스 트라이얼 계정 생성 및 서버리스 프로젝트 생성 (추천)
+  - https://cloud.elastic.co/
+- Option 2. Download and install
+  - Elasticsearch: https://www.elastic.co/downloads/elasticsearch
+  - Kibana: https://www.elastic.co/downloads/kibana
+
+### 실습 데이터 업로드 (Kibana > Data Visualizer)
+https://github.com/insukcho/CDC2026/blob/main/parks.csv
 
 ### checking the raw index mapping info
 
