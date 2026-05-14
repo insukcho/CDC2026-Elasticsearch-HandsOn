@@ -1,5 +1,9 @@
-# CDC2026 Elasticsearch 로 Private AI system 구축하기
+# CDC2026 Elasticsearch를 활용한 Private AI system 구축하기
 Resource share for the Elasticsearch HandsOn session in CDC2026
+
+### Handson Scope
+<img width="1317" height="757" alt="Screenshot 2026-05-13 at 9 56 45 PM" src="https://github.com/user-attachments/assets/e98de79b-1f10-42a0-8c6e-825eb097bf0c" />
+
 
 ### Elasticsearch 설치하기
 
