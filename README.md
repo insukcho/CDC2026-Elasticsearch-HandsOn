@@ -4,10 +4,14 @@ Resource share for the Elasticsearch HandsOn session in CDC2026
 ### Speaker
 Insuk Cho (https://insukcho.github.io/)
 
+## Intro
 ### Handson Scope
 <img width="1317" height="757" alt="Screenshot 2026-05-13 at 9 56 45 PM" src="https://github.com/user-attachments/assets/e98de79b-1f10-42a0-8c6e-825eb097bf0c" />
 
+### Elastic fundamentals
+https://www.elastic.co/docs/get-started
 
+## Installation
 ### Elasticsearch 설치하기
 
 - Option 1. 클라우드 서비스 트라이얼 계정 생성 및 서버리스 프로젝트 생성 (추천)
@@ -15,7 +19,11 @@ Insuk Cho (https://insukcho.github.io/)
 - Option 2. Download and install
   - Elasticsearch: https://www.elastic.co/downloads/elasticsearch
   - Kibana: https://www.elastic.co/downloads/kibana
+ 
+### Observability 데이터 수집을 위한 Elastic Agent 설치하기
+- System integration으로 개인 실습 PC 로그 및 메트릭 수집
 
+## 실습 1. Hybrid Search with `Simantic_text`
 ### 실습 데이터 업로드 (Kibana > Data Visualizer)
 https://github.com/insukcho/CDC2026/blob/main/parks.csv
 
@@ -227,4 +235,11 @@ POST /_query?format=txt
 
 - https://www.elastic.co/docs/solutions/search/hybrid-semantic-text
 
+## 실습 2. Ovservability 데이터 분석하기
+
+### Dashboard 확인 및 AI Agent 활용
+
+### Alert
+
+### Workflow
 
