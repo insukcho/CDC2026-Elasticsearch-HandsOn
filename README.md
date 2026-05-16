@@ -6,7 +6,9 @@ Insuk Cho (https://insukcho.github.io/)
 
 ## Intro
 ### Handson Scope
-<img width="1317" height="757" alt="Screenshot 2026-05-13 at 9 56 45 PM" src="https://github.com/user-attachments/assets/e98de79b-1f10-42a0-8c6e-825eb097bf0c" />
+https://www.elastic.co/what-is/retrieval-augmented-generation
+<img width="1142" height="597" alt="image" src="https://github.com/user-attachments/assets/f2fd01d3-ff06-4fa7-8a65-07f642b44dd5" />
+
 
 ### Elastic fundamentals
 https://www.elastic.co/docs/get-started
@@ -235,4 +237,5 @@ POST /_query?format=txt
 
 - Try it again: https://www.elastic.co/docs/solutions/search/hybrid-semantic-text
 - Explore what Elastic offer these days: https://www.elastic.co/demo-gallery
+- RAG related content: https://www.elastic.co/what-is/retrieval-augmented-generation
 
