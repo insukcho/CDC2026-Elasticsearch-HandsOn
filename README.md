@@ -231,15 +231,7 @@ POST /_query?format=txt
 }
 ```
 
-### References
+### References (복습하기)
 
 - https://www.elastic.co/docs/solutions/search/hybrid-semantic-text
-
-## 실습 2. Ovservability 데이터 분석하기
-
-### Dashboard 확인 및 AI Agent 활용
-
-### Alert
-
-### Workflow
 
