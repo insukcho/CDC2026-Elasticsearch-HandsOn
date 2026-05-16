@@ -231,7 +231,8 @@ POST /_query?format=txt
 }
 ```
 
-### References (복습하기)
+### Homework
 
-- https://www.elastic.co/docs/solutions/search/hybrid-semantic-text
+- Try it again: https://www.elastic.co/docs/solutions/search/hybrid-semantic-text
+- Explore what Elastic offer these days: https://www.elastic.co/demo-gallery
 
