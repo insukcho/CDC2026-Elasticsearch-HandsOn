@@ -141,7 +141,7 @@ GET parks_new/_analyze
 }
 ```
 
-### Standard search
+### Traditional Text search
 
 ```
 GET parks_new/_search
@@ -182,7 +182,7 @@ GET parks_new/_search
 }
 ```
 
-### Hybrid search
+### Hybrid search with Query DSL
 
 ```
 GET parks_new/_search
@@ -218,7 +218,7 @@ GET parks_new/_search
 }
 ```
 
-### Hybrid search with ESQL
+### Hybrid search with ES|QL
 
 ```
 POST /_query?format=txt
